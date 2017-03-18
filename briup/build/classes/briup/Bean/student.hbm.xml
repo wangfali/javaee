@@ -1,0 +1,12 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="com.briup.bean">
+	<class name="Student" table="briupstudent">
+		<id name="name" column="name">
+			<generator class="increment"></generator>
+		</id>
+		<property name="password"/>
+	</class>
+</hibernate-mapping>

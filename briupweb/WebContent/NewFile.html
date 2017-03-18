@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function result(){
+	var i = document.getElementById("month");
+	var option=parseInt(i);
+	switch(option){
+	case 1:
+	case 2:
+	case 3:
+	case 4:
+	case 5:
+		alert("该月份微笑");
+		break；
+	default:
+		alter("没有该月份");
+			
+	}
+}
+	
+</script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input id="month" type="text">
+	<input type="button" value="确定" onclick="result()" />
+</body>
+</html>
