@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+          "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+   <!-- 修改访问的后缀 -->
+   <constant name="struts.action.extension" value="action,do,,"></constant>
+   <!--包含总的配置文件 -->
+   <include file="com/briup/www/struts.xml"></include>
+   <!-- 包含常量的配置文件 -->
+   <include file="Contact.xml"></include>
+   <!-- 包含文件上传配置文件 -->
+   <include file="com/briup/www/Upload1.xml"></include>
+</struts>

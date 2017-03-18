@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+          "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!--使用通配符的方法访问一个类中的多个方法-->
+	<!-- 在使用Action配置时名称不能使用关键字fileUpload -->
+	<!-- 在文件上传出错后Strust会自动给用户返回一个错误提示的结果视图 input错误 -->
+    <package name="DefaultAction" extends="struts-default" namespace="/">
+    	<action name="fileUplodAction" class="com.briup.www.FileUploadAction">
+    		<result name="success">/index.jsp</result>
+    		<result name="input">/e/error.jsp</result>
+    	</action>
+    </package> 
+</struts>

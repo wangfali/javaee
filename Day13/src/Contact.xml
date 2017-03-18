@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+          "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+   <!-- 配置常量 -->
+   <!-- 配置request的编码，只对post提交方式有用 -->
+   <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+   <!-- 文件上传的大小 -->
+   <constant name="struts.multipart.maxSize" value="2097152"></constant>
+   <!-- 是否支持动态方法的调用 -->
+   <constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+</struts>
