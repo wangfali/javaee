@@ -1,0 +1,66 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>ready.html</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+  </head>
+  <body>
+  	
+  	<form action="06_mouseover_mouseout.html" method="post">
+		用户名：<input type="text"/>
+		<input type="submit" value="表单提交"/>
+	</form>
+	<script type="text/javascript">
+		//当浏览器加载时触发
+		$(function(){
+			//鼠标定位文本框
+			$(":text").focus();
+		});
+	</script>
+	<script type="text/javascript">
+	//检测是否为中文，true表示是中文，false表示非中文
+		function isChiness(str){
+			if(/^[\u3220-\uFA29]+$/.test(str)){
+				return true;
+			}else{
+				return false;
+			}
+		}
+	</script>
+	<script type="text/javascript">
+		//当表单提交前检测
+		$("form").submit(function(){
+			//创建一个标识
+			var flag= false;
+			//获取文本框中内容
+			var str=$(":text").val();
+			str=$.trim(str);
+			//判断是否为中文
+			if(str.length==0){
+				window.alert("用户名不能为空！");
+				$(":text").focus();
+				$(":text").val("");
+				//判断是否为中文
+			}else if(isChiness(str)){
+				window.alert("不能为中文");
+				$(":text").focus();
+				$(":text").val("");
+			}else{
+				flag=true;
+				return flag;
+			}
+			return flag;
+		});
+		//定位表单
+		
+	</script>
+	
+  </body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/ajax.js"></script>
+</head>
+<body>
+	<!--使用JS创建person对象-->
+	<!-- <script type="text/javascript">
+		function person(id,userName,salary){
+			this.id=id;
+			this.userName=userName;
+			this.salary=salary;
+		}
+		var p=new person(1, "wangfali", 12);
+		window.alert(p.id+","+p.userName+","+p.salary);
+	</script> -->
+	<!--使用JSON创建对象-->
+	<script type="text/javascript">
+		/* var person={
+			id:12,
+			userName:"wangfali",
+			salary:12
+		};
+		window.alert(person.id+","+person.userName+","+person.salary); */
+		
+	</script>
+	<!-- 使用JSON创建一个对象数组-->
+	<script type="text/javascript">
+	/* 	var p=[
+		      {
+		    	id:23,
+		    	name:"wangali"
+		      },
+		      {
+		    	  id:23,
+		    	  name:"wangfa"
+		      },
+		      {
+		    	  id:32,
+		    	  name:"wang"
+		      }
+		 ]
+		//输出对象
+		for(var i=0;i<p.length;i++){
+			document.write(p[i].id);
+		} */
+	</script>
+	<!--使用JSON创建对象 ；对象中有一个属性为数组-->
+	<script type="text/javascript">
+		/* var p={
+				id:23,
+				name:"wangfali",
+				home:["江西","海南","广东"]
+		};
+		//遍历输出家庭地址
+		for(var i=0;i<p.home.length;i++){
+			document.write(p.home[i]+"<br>");
+		} */
+	</script>
+	<!--使用json创建对象，对象中含有数组同时也含有方法-->
+	<script type="text/javascript">
+		var p={
+				id:23,
+				name:"王法立",
+				home:['海南','江西','广东'],
+				show:function(){
+					document.write("你好！");
+				}
+		};
+
+		p.show();
+	</script>
+</body>
+</html>

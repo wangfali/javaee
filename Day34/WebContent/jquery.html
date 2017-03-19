@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery入门</title>
+<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+</head>
+<body>
+	<input id="inputID" type="button" value="这就是jQuery库,写少代码，做多事情"/>
+	<div id="divID">哈哈哈</div>
+	<script type="text/javascript">
+	//获取input标签中的value值
+	//js
+		/* var inputElement=document.getElementById("inputID");
+		var vals=inputElement.value;
+		alert(vals); */
+	//jQuery
+	/* var input=$("#inputID").val();
+		window.alert(input); */
+	//获取div中的元素
+	//js
+	/* var div=document.getElementById("divID");
+		var divs=div.innerHTML;
+		window.alert(divs); */
+		//jQuery
+		var divs=$("#divID").html();
+		window.alert(divs);
+	</script>
+</body>
+</html>

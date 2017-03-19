@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+</head>
+<body>
+<body>
+	
+	<form>
+
+	  <input type="text" name="email" disabled="disabled" />
+	  <input type="text" name="password" disabled="disabled" />
+	  <input type="text" name="id" />
+
+	  <input type="checkbox" name="newsletter" checked="checked" value="Daily" />
+	  <input type="checkbox" name="newsletter" value="Weekly" />
+	  <input type="checkbox" name="newsletter" checked="checked" value="Monthly" />
+	
+      <select id="provinceID">
+		  <option value="1">广东</option>
+		  <option value="2" selected="selected">湖南</option>
+		  <option value="3">湖北</option>
+	  </select>
+		
+	</form>
+	<script type="text/javascript">
+		//1)查找所有可用的input元素的个数
+		//window.alert($("input:enabled").length);
+	 	//2)查找所有不可用的input元素的个数
+	 	//window.alert($("input:disabled").length);
+	 	//3)查找所有选中的复选框元素的个数
+	 	//window.alert($("input:checked").length);
+	 	//4)查找所有未选中的复选框元素的个数
+	 	//window.alert($("input:NOT(:checked)").length);
+	 	//5)查找所有选中的选项元素的个数
+	 	//window.alert($("#provinceID option:selected").length);
+	</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+	 <script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
+  	 <script type="text/javascript">
+  	  	function myclick(){
+	 		 var $table=$("table tr:first");
+	 		var tdElement=$table.children();
+	 		$(tdElement).each(function(){
+	 			window.alert($(this).text());
+	 		}); 
+	 		var $table2=$("table tr:eq(2)");
+	 		var tdElement1=$table2.children();
+	 		$(tdElement1).each(function(){
+	 			window.alert($(this).text());
+	 		}); 
+	 	}
+  	 </script>
+  </head>
+  <body>
+	<table border="2" align="center" width="30%">
+		<tr>
+			<td>A1</td><td>A2</td><td>A3</td>
+		</tr>
+		<tr>
+			<td>B1</td><td>B2</td><td>B3</td>
+		</tr>
+		<tr>
+			<td>C1</td><td>C2</td><td>C3</td>
+		</tr>
+		<tr>
+			<td>D1</td><td>D2</td><td>D3</td>
+		</tr>
+		<tr>
+			<td colspan="3" align="center">
+				<input type="button" value="显示 " onclick="myclick()" />
+			</td>
+		</tr>
+	</table>
+  </body>
+</html>
+
+	
+	
+	
+	

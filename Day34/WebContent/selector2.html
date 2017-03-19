@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+</head>
+<body>
+	<form>
+		<input type="text" value="a"/>		
+		<table>
+			<tr>
+				<td>
+					<input type="checkbox" value="b"/>
+				</td>
+			</tr>			
+		</table>
+	</form>
+	<input type="radio" value="ccccccccc"/>
+	<input type="radio" value="d"/>
+	<input type="radio" value="e"/>
+	<script type="text/javascript">
+	
+	//1)找到表单form里所有的input元素的个数
+		//window.alert($("form input").length);
+  	//2)找到表单form里所有的子级input元素个数
+  		//window.alert($("form>input").length);
+  	//3)找到表单form同级第一个input元素的value属性值
+  		//window.alert($("form+input").val());
+  	//4)找到所有与表单form同级的input元素个数
+  		window.alert($("form~input").length);
+  	</script>
+</body>
+</html>

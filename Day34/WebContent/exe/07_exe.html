@@ -1,0 +1,53 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		.myClass{
+			color:pink;
+		}
+	</style>
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+  </head>
+  <body>
+	<table border="1" align="center">
+		<tr>
+			<th>用户名</th>
+			<td>
+				<input type="text" value="输入用户名"/>
+			</td>
+		</tr>
+	</table>
+	
+	<script type="text/javascript">
+		//当浏览器加载页面时改变字体的颜色
+		$(function(){
+			$(":text").addClass("myClass");
+		});
+	</script>	
+	<script type="text/javascript">
+	//当光标定位文本框时,清空文本框内容，清空样式
+		$(":text").focus(function(){
+			$(this).val("").removeClass("myClass");
+		});
+	</script>
+	<script type="text/javascript">
+		//当文本框失去焦点时
+		$(":text").blur(function(){
+			//获取文本框的内容
+			var str=$(this).val();
+			//去除两边的空格
+			str=$.trim(str);
+			//判断是否为空
+			if(str.length==0){
+				//加上样式
+				$(this).val("请输入用户名").addClass("myClass");
+			}
+		});
+	</script>
+	
+  </body>
+</html>
+
+
+

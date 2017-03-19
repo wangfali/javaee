@@ -1,0 +1,85 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+	</head>
+	<body>
+		<table border="1" align="center">
+			<thead>
+				<tr>
+					<th>状态</th>
+					<th>用户名</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input type="checkbox" /></td>
+					<td>赵</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" /></td>
+					<td>钱</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" /></td>
+					<td>孙</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" /></td>
+					<td>李</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" /></td>
+					<td>周</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td>
+						<input type="checkbox" />
+						全选
+					</td>
+					<td>
+						<input type="button" value="全反选" />
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+		
+		<script type="text/javascript">
+			//全选中和全取消
+			//定位选中框,添加事件
+			$(":checkbox:last").click(function(){
+				//设置一个标识
+				//判断选项框是否选中
+				var flag=this.checked;
+				//通过flag判断是否选中
+				if(flag){
+					//定位所有的选项框
+					$(":checkbox").attr("checked","true");
+				}else{
+					$(":checkbox").removeAttr("checked");
+				}
+			});
+		</script>
+		
+		<script type="text/javascript">
+			//全反选
+			//定位tfoot标签中的全反选按钮，同时添加单击事件
+			$("tfoot input:button").click(function(){
+				//将tbody标签中的所有选中的复选框失效
+				$("tbody input:checkbox:checked").attr("disabled","disabled");
+				//将tbody标签中的所有生效的复选框选中
+				$("tbody input:checkbox:enabled").attr("checked","checked");
+				//将tbody标签中的所有生效的复选框生效且设置为未选中
+				$("tbody input:checkbox:disabled").removeAttr("disabled").removeAttr("checked");
+			});
+			
+		</script>
+		
+	</body>
+</html>
+
+
+

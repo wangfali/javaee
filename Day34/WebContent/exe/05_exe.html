@@ -1,0 +1,73 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script> 
+  </head>
+  <body>
+  	<table id="tableID" border="1" align="center" width="60%">
+  		<thead>
+	  		<tr>	
+	  			<th>用户名</th>
+	  			<th>密码</th>
+	  			<th>操作</th>
+	  		</tr>
+  		</thead>
+  		<tbody id="tbodyID">
+  			<!-- 动态增加行 
+  			<tr>
+  				<td>哈哈</td>
+  				<td>123</td>
+  				<td><input type="button" value="删除" onclick=""/></td>
+  			</tr>
+  			-->
+  		</tbody>
+  	</table>
+  	
+  	<hr/>
+  	用户名：<input type="text" id="usernameID"/>
+  	密码：  <input type="text" id="passwordID"/>
+  			<input type="button" value="增加" id="addID"/>
+  			
+  </body>
+  
+  <script type="text/javascript">
+  		//定位"增加"按钮，同时添加单击事件
+  		$("#addID").click(function(){
+  			//获取用户名和密码
+  			var userName=$("#usernameID").val();
+  			var password=$("#passwordID").val();
+  			//取出两边的空格
+  			userName=$.trim(userName);
+  			password=$.trim(password);
+  			//判断用户名和密码是否为空
+  			if(userName.length==0||password.length==0){
+  				//提示用户名和密码不能为空
+  				window.alert("用户名或者密码不能为空！");
+  			}else{
+  				//定位tbody，创建一个新的行添加进入tbody中
+  				var $tbody=$("#tbodyID");
+  				//1.创建tr对象
+  				var $tr=$("<tr></tr>");
+  				//2.创建用户名列对象
+  				var $td1=$("<td>"+userName+"</td>");
+  				var $td2=$("<td>"+password+"</td>");
+  				var $td3=$("<td><input type='button' value='删除'></td>");
+  				$td3.click(function(){
+  					$tr.remove();
+  				});
+  				//将td加入tr中
+  				$tr.append($td1).append($td2).append($td3);
+  				//将tr加入tbody中
+  				$tbody.append($tr);
+  				//清空文本框
+  				$("#passwordID").val("").focus();
+  				$("#usernameID").val("").focus();
+  			}
+  		});
+  </script>
+  
+</html>
+
+
+
